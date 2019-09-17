@@ -2,16 +2,20 @@
 Trabalho de implementação de uma Post machine para a Matéria de Teoria da Computação.
 
 ## Arquivos
-    decode_entry.rb -> decodifica a entrada do programa\
-    fila.rb -> Cria uma classe fila para administrar a fita da máquina\
-    main.rb -> Função principal de gerenciamento\
-    post_machine_helpers.rb -> funções auxiliares como conversão de string para Fila\
-    post_machine.rb -> as operações básicas da máquina\
+    decode_entry.rb -> decodifica a entrada do programa
+
+    fila.rb -> Cria uma classe fila para administrar a fita da máquina
+
+    main.rb -> Função principal de gerenciamento
+
+    post_machine_helpers.rb -> funções auxiliares como conversão de string para Fila
+
+    post_machine.rb -> as operações básicas da máquina
 
 ## Exemplos
-    entrada1.txt -> Aceita uma sequencia de a's seguida pelo mesmo número de caracteres b.\
+    entrada1.txt -> Aceita uma sequencia de a's seguida pelo mesmo número de caracteres b.
 
-    entrada2.txt -> Aceita uma entrada com o mesmo número de a's e b's independente da posição.\
+    entrada2.txt -> Aceita uma entrada com o mesmo número de a's e b's independente da posição.
 
 ## Funcionamento conceitual
 
