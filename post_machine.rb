@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
+# função que percorre a linha de instrução do programa para verificar cada campo da instrucao
 def trabalhar_instrucao(instrucao)
-  posicao_instrucao = 0
+  posicao_instrucao = 0 # !|2| # h
 
   instrucao_atual = instrucao[posicao_instrucao]
-  posicao_instrucao += 1
+  posicao_instrucao += 1 # !2| |# h
 
   if instrucao[posicao_instrucao] != ' '
     instrucao_atual = "#{instrucao_atual}#{instrucao[posicao_instrucao]}"
@@ -12,13 +13,13 @@ def trabalhar_instrucao(instrucao)
   end
   instrucao_atual = instrucao_atual.to_i if instrucao_atual != 's'
 
-  posicao_instrucao += 1
+  posicao_instrucao += 1 # !2 |#| h
 
   simbolo_ler = instrucao[posicao_instrucao] if instrucao[posicao_instrucao] != ' '
-  posicao_instrucao += 2
+  posicao_instrucao += 2 # !2 # |h|
 
   proxima_instrucao = instrucao[posicao_instrucao]
-  posicao_instrucao += 1
+  posicao_instrucao += 1 # !5   3| |a
 
   if instrucao[posicao_instrucao] != ' '
     proxima_instrucao = "#{proxima_instrucao}#{instrucao[posicao_instrucao]}"
@@ -31,7 +32,7 @@ def trabalhar_instrucao(instrucao)
                         'h'
                       end
 
-  posicao_instrucao += 1
+  posicao_instrucao += 1 # !5   3 |a|
 
   if instrucao[posicao_instrucao].class != NilClass
     if (instrucao[posicao_instrucao].ord != 32) && (instrucao[posicao_instrucao].ord != 10)
@@ -43,6 +44,9 @@ def trabalhar_instrucao(instrucao)
   [instrucao_atual, simbolo_ler, proxima_instrucao, simbolo_escrever]
 end
 
+# Função principal 
+# Em loop, verifica cada linha do programa de entrada, se der match com o campo de instrução atual
+# e o primeiro campo da fila, é executada a instrução e alterado os campos conforme.
 
 def post_machine(programa, entrada)
   posicao_instrucao = 0

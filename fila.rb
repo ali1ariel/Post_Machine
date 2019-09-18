@@ -12,6 +12,7 @@ module LinkedList
     end
   end
   # Classe Fila
+  # Lista duplamente encadeada, com funções de adicionar no final e remover do começo
   class Filo
     attr_reader :first
 
@@ -21,16 +22,17 @@ module LinkedList
     end
 
     def push(value)
+      # Inicia a fila
       if @first.nil? && @last.nil?
         @first = Node.new(value, nil, nil)
         @last = @first
-
+      # A fila só tem um elemento
       elsif @first == @last
         @last = Node.new(value, nil, nil)
         @first = Node.new(@first.value, @last, nil)
 
         @last.previous_node = @first
-
+      
       else
         aux = Node.new(value, nil, @last)
         @last = Node.new(@last.value, aux, @last.previous_node)
