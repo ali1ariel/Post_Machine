@@ -2,13 +2,11 @@
 Trabalho de implementação de uma Post machine para a Matéria de Teoria da Computação, realizado em conjunto com meu ilustríssimo colega [Gabriel Haddad](https://github.com/GHVieira).
 
 ## Arquivos
-    decode_entry.rb -> decodifica a entrada do programa
+    aux_functions.rb -> pega a entrada programa e a entrada do usuário
 
     fila.rb -> Cria uma classe fila para administrar a fita da máquina
 
     main.rb -> Função principal de gerenciamento
-
-    post_machine_helpers.rb -> funções auxiliares como conversão de string para Fila
 
     post_machine.rb -> as operações básicas da máquina
 
